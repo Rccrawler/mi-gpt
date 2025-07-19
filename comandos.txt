@@ -1,0 +1,19 @@
+git clone https://github.com/karpathy/nanogpt
+cd nanogpt
+pip install -r requirements.txt
+
+// text con los datos 1000 minimo
+data/midatos/input.txt
+
+// configuracion del entrenamiento
+config/train_tiny_midatos.py
+
+// preparar txt con los datos que esta en data/midatos/input.txt
+python prepare.py
+
+// entrenar la ia
+python train.py config/train_tiny_midatos.py
+
+// probar la ia
+python sample.py --out_dir=out-tiny-midatos --start="Había una vez"
+
